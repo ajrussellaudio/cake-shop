@@ -1,10 +1,35 @@
 import React from "react";
 import NewCakeForm from "../components/NewCakeForm";
 
-const handleFormSubmit = () => {
-  console.log("Form submitted...");
-};
+class CakeCreate extends React.Component {
+  state = {
+    name: "",
+    comment: "",
+    imageUrl: "",
+    yumFactor: 3
+  };
 
-const CakeCreate = () => <NewCakeForm onSubmit={handleFormSubmit} />;
+  handleFormSubmit = () => {
+    console.log("Form submitted...");
+  };
+
+  handleNameChange = () => {};
+  handleCommentChange = () => {};
+  handleImageUrlChange = () => {};
+  handleYumFactorChange = () => {};
+
+  render() {
+    return (
+      <NewCakeForm
+        {...this.state}
+        onSubmit={this.handleFormSubmit}
+        onNameChange={this.handleNameChange}
+        onCommentChange={this.handleCommentChange}
+        onImageUrlChange={this.handleImageUrlChange}
+        onYumFactorChange={this.handleYumFactorChange}
+      />
+    );
+  }
+}
 
 export default CakeCreate;
