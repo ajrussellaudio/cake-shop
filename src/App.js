@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import CakesIndex from "./views/CakesIndex";
 import CakeView from "./views/CakeView";
+import CakeCreate from "./views/CakeCreate";
 
 const App = () => (
   <Router>
@@ -15,6 +16,7 @@ const App = () => (
         </Link>
       </header>
       <Route exact path="/" component={CakesIndex} />
+      <Route path="/cakes/new" component={CakeCreate} />
       <Route path="/cakes/:id" component={CakeView} />
     </div>
   </Router>
