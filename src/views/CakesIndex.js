@@ -1,5 +1,5 @@
 import React from "react";
-import CakeList from "./CakeList";
+import CakeList from "../components/CakeList";
 
 class CakesIndex extends React.Component {
   state = {
