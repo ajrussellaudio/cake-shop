@@ -1,27 +1,14 @@
 import React from "react";
-import CakeList from "./components/CakeList";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import CakesIndex from "./components/CakesIndex";
 
-class App extends React.Component {
-  state = {
-    cakes: []
-  };
-
-  componentDidMount() {
-    const baseUrl =
-      "http://ec2-34-243-153-154.eu-west-1.compute.amazonaws.com:5000/api";
-    fetch(`${baseUrl}/cakes`)
-      .then(res => res.json())
-      .then(cakes => this.setState({ cakes: cakes }));
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <h1>Cakes!</h1>
-        <CakeList cakes={this.state.cakes} />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <div className="App">
+      <h1>Cakes!</h1>
+      <Route exact path="/" component={CakesIndex} />
+    </div>
+  </Router>
+);
 
 export default App;
