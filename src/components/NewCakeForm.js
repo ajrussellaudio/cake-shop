@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const NewCakeForm = props => (
-  <form>
+  <form {...props}>
     <label htmlFor="name">Name:</label>
     <input type="text" id="name" name="name" />
     <label htmlFor="comment">Comment:</label>
@@ -11,6 +11,7 @@ const NewCakeForm = props => (
     <input type="text" id="image-url" name="imageUrl" />
     <label htmlFor="yum-factor">Yum Factor:</label>
     <input type="number" id="yum-factor" name="yumFactor" min={1} max={5} />
+    <input type="submit" id="submit" value="New Cake" />
   </form>
 );
 

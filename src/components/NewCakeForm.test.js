@@ -32,5 +32,14 @@ describe("NewCakeForm", () => {
     expect(input.prop("max")).toEqual(5);
   });
 
-  it("should call its onSubmit function when button pressed");
+  it("should call its onSubmit function when button pressed", () => {
+    expect(onSubmitSpy.mock.calls.length).toEqual(0);
+    const form = wrapper.find("form");
+    form.simulate("submit");
+    expect(onSubmitSpy.mock.calls.length).toEqual(1);
+  });
+
+  afterEach(() => {
+    onSubmitSpy.mockReset();
+  });
 });
