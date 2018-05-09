@@ -8,7 +8,9 @@ const NewCakeForm = props => (
     <label htmlFor="comment">Comment:</label>
     <textarea name="comment" id="comment" cols="30" rows="10" />
     <label htmlFor="image-url">Image URL:</label>
-    <input type="text" id="image-url" name="image-url" />
+    <input type="text" id="image-url" name="imageUrl" />
+    <label htmlFor="yum-factor">Yum Factor:</label>
+    <input type="number" id="yum-factor" name="yumFactor" min={1} max={5} />
   </form>
 );
 
