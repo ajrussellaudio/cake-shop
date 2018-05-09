@@ -1,14 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import CakeListItem from "./CakeListItem";
 
 const CakeList = ({ cakes }) => (
   <ul>
     {cakes.map(cake => (
       <li key={cake.id}>
-        <div>
-          <img src={cake.imageUrl} alt={cake.name} />
-          <p>{cake.name}</p>
-        </div>
+        <CakeListItem {...cake} />
       </li>
     ))}
   </ul>
