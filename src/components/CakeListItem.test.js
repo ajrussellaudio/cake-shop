@@ -17,8 +17,8 @@ describe("CakeListItem", () => {
   });
 
   it("should show the name of the cake", () => {
-    const cakeText = wrapper.find("p");
-    expect(cakeText.text()).toEqual(mockCake.name);
+    const cake = wrapper.find("p");
+    expect(cake.text()).toEqual(mockCake.name);
   });
 
   it("should show the image of the cake", () => {
