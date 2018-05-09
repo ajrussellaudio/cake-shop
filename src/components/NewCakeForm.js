@@ -9,7 +9,7 @@ const NewCakeForm = props => (
       id="name"
       name="name"
       value={props.name}
-      onChange={props.onNameChange}
+      onChange={props.onPropertyChange}
     />
 
     <label htmlFor="comment">Comment:</label>
@@ -19,7 +19,7 @@ const NewCakeForm = props => (
       cols="30"
       rows="10"
       value={props.comment}
-      onChange={props.onCommentChange}
+      onChange={props.onPropertyChange}
     />
 
     <label htmlFor="image-url">Image URL:</label>
@@ -28,7 +28,7 @@ const NewCakeForm = props => (
       id="image-url"
       name="imageUrl"
       value={props.imageUrl}
-      onChange={props.onImageUrlChange}
+      onChange={props.onPropertyChange}
     />
 
     <label htmlFor="yum-factor">Yum Factor:</label>
@@ -39,7 +39,7 @@ const NewCakeForm = props => (
       min={1}
       max={5}
       value={props.yumFactor}
-      onChange={props.onYumFactorChange}
+      onChange={props.onPropertyChange}
     />
 
     <input type="submit" id="submit" value="New Cake" />
@@ -52,10 +52,7 @@ NewCakeForm.propTypes = {
   imageUrl: PropTypes.string,
   yumFactor: PropTypes.number,
   onSubmit: PropTypes.func.isRequired,
-  onNameChange: PropTypes.func.isRequired,
-  onCommentChange: PropTypes.func.isRequired,
-  onImageUrlChange: PropTypes.func.isRequired,
-  onYumFactorChange: PropTypes.func.isRequired
+  onPropertyChange: PropTypes.func.isRequired
 };
 
 export default NewCakeForm;

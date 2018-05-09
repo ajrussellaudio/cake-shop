@@ -13,20 +13,19 @@ class CakeCreate extends React.Component {
     console.log("Form submitted...");
   };
 
-  handleNameChange = () => {};
-  handleCommentChange = () => {};
-  handleImageUrlChange = () => {};
-  handleYumFactorChange = () => {};
+  handlePropertyChange = e => {
+    const newState = {};
+    const property = e.target.name;
+    newState[property] = e.target.value;
+    this.setState(newState);
+  };
 
   render() {
     return (
       <NewCakeForm
         {...this.state}
         onSubmit={this.handleFormSubmit}
-        onNameChange={this.handleNameChange}
-        onCommentChange={this.handleCommentChange}
-        onImageUrlChange={this.handleImageUrlChange}
-        onYumFactorChange={this.handleYumFactorChange}
+        onPropertyChange={this.handlePropertyChange}
       />
     );
   }
