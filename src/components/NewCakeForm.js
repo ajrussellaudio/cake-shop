@@ -5,6 +5,8 @@ const NewCakeForm = props => (
   <form>
     <label htmlFor="name">Name:</label>
     <input type="text" id="name" name="name" />
+    <label htmlFor="comment">Comment</label>
+    <textarea name="comment" id="comment" cols="30" rows="10" />
   </form>
 );
 
