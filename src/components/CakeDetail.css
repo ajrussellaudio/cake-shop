@@ -1,9 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 .cake-detail {
   background-size: cover;
   background-position: center;
-  position: absolute;
-  bottom: 0;
-  height: 80%;
+  width: 90%;
+  height: 50vh;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.cake-detail > div {
   width: 100%;
-  padding: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
 }
