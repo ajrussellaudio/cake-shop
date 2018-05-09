@@ -1,0 +1,9 @@
+.cake-detail {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  bottom: 0;
+  height: 80%;
+  width: 100%;
+  padding: 20px;
+}

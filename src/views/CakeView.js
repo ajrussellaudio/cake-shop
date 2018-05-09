@@ -1,4 +1,5 @@
 import React from "react";
+import CakeDetail from "../components/CakeDetail";
 
 class CakeView extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class CakeView extends React.Component {
 
   render() {
     if (!this.state.id) return null;
-    return <h3>{this.state.name}</h3>;
+    return <CakeDetail {...this.state} />;
   }
 }
 
