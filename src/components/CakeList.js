@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import CakeListItem from "./CakeListItem";
+import "./CakeList.css";
 
 const CakeList = ({ cakes }) => (
   <ul>

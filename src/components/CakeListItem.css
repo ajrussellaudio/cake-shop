@@ -1,0 +1,39 @@
+.cake {
+  width: 80%;
+  max-width: 250px;
+  padding: 10px;
+  margin: 10px;
+  background: green;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.cake img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+.cake p {
+  margin: 10px;
+}
+
+.pink {
+  background-color: #ffeded;
+}
+
+.yellow {
+  background-color: #fff6c4;
+}
+
+.green {
+  background-color: #baffcd;
+}
+
+.blue {
+  background-color: #c4eaff;
+}
+
+.purple {
+  background-color: #ddccff;
+}
