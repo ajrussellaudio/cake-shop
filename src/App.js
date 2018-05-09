@@ -10,9 +10,12 @@ const App = () => (
         <Link to="/">
           <h1>Cakes!</h1>
         </Link>
+        <Link to="/cakes/new" className="new-cake">
+          New Cake
+        </Link>
       </header>
       <Route exact path="/" component={CakesIndex} />
-      <Route path="/:id" component={CakeView} />
+      <Route path="/cakes/:id" component={CakeView} />
     </div>
   </Router>
 );

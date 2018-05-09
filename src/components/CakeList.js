@@ -4,7 +4,7 @@ import CakeListItem from "./CakeListItem";
 import "./CakeList.css";
 
 const CakeList = ({ cakes }) => (
-  <ul>
+  <ul id="cake-list">
     {cakes.map(cake => (
       <li key={cake.id}>
         <CakeListItem {...cake} />

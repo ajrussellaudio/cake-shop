@@ -15,6 +15,10 @@ header {
   z-index: 2;
 }
 
+header h1 {
+  color: white;
+}
+
 header a,
 header a:link,
 header a:visited {
@@ -25,4 +29,24 @@ header a:visited {
 .App {
   margin-top: 10vh;
   max-width: 100%;
+}
+
+.new-cake {
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.new-cake,
+.new-cake:link,
+.new-cake:visited {
+  background-color: #7abfaa;
+}
+
+.new-cake:hover,
+.new-cake:active,
+.new-cake:focus {
+  background-color: #88ccb6;
 }
