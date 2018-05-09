@@ -3,8 +3,10 @@ import { shallow } from "enzyme";
 import CakeList from "./CakeList";
 
 describe("CakeList", () => {
-  it("should be a simple list", () => {
-    const mockCakes = [
+  let mockCakes, wrapper;
+
+  beforeEach(() => {
+    mockCakes = [
       {
         id: "cake1",
         name: "Cake 1",
@@ -20,12 +22,11 @@ describe("CakeList", () => {
         yumFactor: 3
       }
     ];
-    const wrapper = shallow(<CakeList cakes={mockCakes} />);
+    wrapper = shallow(<CakeList cakes={mockCakes} />);
+  });
+
+  it("should be a simple list", () => {
     expect(wrapper.find("ul").length).toEqual(1);
     expect(wrapper.find("li").length).toEqual(mockCakes.length);
   });
-
-  it("should show the name of the cake");
-
-  it("should show the image of the cake");
 });
