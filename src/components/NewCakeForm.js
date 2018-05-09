@@ -5,8 +5,10 @@ const NewCakeForm = props => (
   <form>
     <label htmlFor="name">Name:</label>
     <input type="text" id="name" name="name" />
-    <label htmlFor="comment">Comment</label>
+    <label htmlFor="comment">Comment:</label>
     <textarea name="comment" id="comment" cols="30" rows="10" />
+    <label htmlFor="image-url">Image URL:</label>
+    <input type="text" id="image-url" name="image-url" />
   </form>
 );
 

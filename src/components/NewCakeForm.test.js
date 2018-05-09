@@ -19,7 +19,11 @@ describe("NewCakeForm", () => {
     expect(textarea.prop("name")).toEqual("comment");
   });
 
-  it("should be able to specify an image URL");
+  it("should be able to specify an image URL", () => {
+    const input = wrapper.find("#image-url");
+    expect(input.prop("name")).toEqual("image-url");
+  });
+
   it("should be able to rate the cake's yum factor from 1 to 5");
   it("should call its onSubmit function when button pressed");
 });
