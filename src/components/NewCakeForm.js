@@ -38,7 +38,7 @@ const NewCakeForm = props => (
       name="yumFactor"
       min={1}
       max={5}
-      value={props.yumFactor}
+      value={parseInt(props.yumFactor, 10)}
       onChange={props.onPropertyChange}
     />
 
