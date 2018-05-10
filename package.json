@@ -2,7 +2,7 @@
   "name": "cakes-client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3030",
+  "proxy": "http://ec2-34-243-153-154.eu-west-1.compute.amazonaws.com:5000",
   "dependencies": {
     "lodash.sample": "^4.2.1",
     "prop-types": "^15.6.1",
