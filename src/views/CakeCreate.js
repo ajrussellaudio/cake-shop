@@ -3,20 +3,21 @@ import { Redirect } from "react-router-dom";
 import NewCakeForm from "../components/NewCakeForm";
 
 class CakeCreate extends React.Component {
-  state = {
-    name: "",
-    comment: "",
-    imageUrl: "",
-    yumFactor: 3,
-    formSent: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      comment: "",
+      imageUrl: "",
+      yumFactor: 3,
+      formSent: false
+    };
+  }
 
   handleFormSubmit = event => {
     event.preventDefault();
-    const baseUrl =
-      "http://ec2-34-243-153-154.eu-west-1.compute.amazonaws.com:5000/api";
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", `${baseUrl}/cakes`);
+    xhr.open("POST", `${this.props.baseUrl}/api/cakes`);
     xhr.addEventListener("load", () => {
       // eslint-disable-next-line
       if (xhr.status == 201) {
