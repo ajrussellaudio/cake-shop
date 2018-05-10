@@ -9,7 +9,7 @@ class CakeView extends React.Component {
 
   componentDidMount() {
     const id = this.props.match.params.id;
-    fetch(`${this.props.baseUrl}/api/cakes/${id}`)
+    fetch(`/api/cakes/${id}`)
       .then(res => res.json())
       .then(cake => this.setState({ ...cake }));
   }

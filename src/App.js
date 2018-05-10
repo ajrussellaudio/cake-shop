@@ -6,7 +6,7 @@ import CakeCreate from "./views/CakeCreate";
 
 class App extends React.Component {
   state = {
-    baseUrl: "http://ec2-34-243-153-154.eu-west-1.compute.amazonaws.com:5000"
+    baseUrl: ""
   };
 
   render() {

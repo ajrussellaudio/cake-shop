@@ -10,7 +10,7 @@ class CakesIndex extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`${this.props.baseUrl}/api/cakes`)
+    fetch(`/api/cakes`)
       .then(res => res.json())
       .then(cakes => this.setState({ cakes: cakes }));
   }

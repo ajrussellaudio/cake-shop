@@ -17,12 +17,9 @@ class CakeCreate extends React.Component {
   handleFormSubmit = event => {
     event.preventDefault();
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", `${this.props.baseUrl}/api/cakes`);
+    xhr.open("POST", `/api/cakes`);
     xhr.addEventListener("load", () => {
-      // eslint-disable-next-line
-      if (xhr.status == 201) {
-        this.setState({ formSent: true });
-      }
+      this.setState({ formSent: true });
     });
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(JSON.stringify(this.state));
